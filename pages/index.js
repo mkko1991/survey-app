@@ -2,15 +2,15 @@ import {useRouter} from "next/router";
 import {useSurveyStore} from "@/store/survey";
 import {useState} from "react";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     return {
         props: {
-            now: new Date().toISOString(),
+            message: "SSR 페이지 정상 동작 중!",
         },
     };
 }
 
-export default function SurveyForm() {
+export default function SurveyForm({message}) {
     const { name, age, setName, setAge } = useSurveyStore();
     const router = useRouter();
     const [check, setCheck] = useState(false);
@@ -21,6 +21,7 @@ export default function SurveyForm() {
 
     return (
         <main className="p-4 body">
+            <div style={{"display": "none"}}>{message}</div>
             <h2>이모티콘 추천 인터페이스 연구</h2>
 
             <p>안녕하세요! 😊<br/>
