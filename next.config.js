@@ -1,4 +1,4 @@
-module.exports = {
-    output: 'export',
-    trailingSlash: true, // ← 정적 라우팅에 추천
-}
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+export default nextConfig;
