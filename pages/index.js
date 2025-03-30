@@ -1,4 +1,3 @@
-// pages/index.js
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 
@@ -10,7 +9,7 @@ export async function getServerSideProps() {
     };
 }
 
-export default function Home() {
+export default function Home({now}) {
     const router = useRouter();
     useEffect(() => {
         router.replace('/survey/greetings');
