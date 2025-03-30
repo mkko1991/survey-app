@@ -4,16 +4,17 @@ import {useState} from "react";
 
 export async function getServerSideProps() {
     return {
-        props: {}, // 아무 props 안 줘도 SSR로 처리됨!
+        props: { time: new Date().toISOString() },
     };
 }
 
-export default function SurveyForm() {
+export default function SurveyForm({time}) {
     const { name, age, setName, setAge } = useSurveyStore();
     const router = useRouter();
     const [check, setCheck] = useState(false);
 
     const handleSubmit = (e) => {
+        console.log(time);
         router.push('/survey/pre_survey');
     };
 
