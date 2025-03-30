@@ -2,6 +2,12 @@ import {useRouter} from "next/router";
 import {useSurveyStore} from "@/store/survey";
 import {useState} from "react";
 
+export async function getServerSideProps() {
+    return {
+        props: {}, // 아무 props 안 줘도 SSR로 처리됨!
+    };
+}
+
 export default function SurveyForm() {
     const { name, age, setName, setAge } = useSurveyStore();
     const router = useRouter();
