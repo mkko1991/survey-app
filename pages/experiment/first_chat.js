@@ -21,7 +21,7 @@ export default function FirstChat() {
     const highlight = (text) => {
         const escaped = text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-        return escaped.replace(/(생일\s?축하)/g, '<span class="highlight">$1</span>');
+        return escaped.replace(/(생일\s?축하)/g, '<span class="first_highlight">$1</span>');
     };
 
     const handleChange = (e) => {
@@ -104,7 +104,7 @@ export default function FirstChat() {
                                     <div key={actualIndex} className="first_imoji">
                                         <img
                                             onClick={(e) => onClickImage(actualIndex, e)}
-                                            className={activeIndex === actualIndex ? 'imoji-img active' : 'imoji-img'}
+                                            className={activeIndex === actualIndex ? 'first_imoji-img first_active' : 'first_imoji-img'}
                                             src={item}
                                             alt=""
                                         />
