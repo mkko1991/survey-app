@@ -150,7 +150,7 @@ export default function FirstChat() {
             }
             {
                 end &&
-                <div className ="next-button">
+                <div className ="first_next-button">
                     <img src="/first_chat/next_button.png" onClick={nextStep}/>
                 </div>
             }

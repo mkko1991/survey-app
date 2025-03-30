@@ -84,7 +84,7 @@ export default function Second_survey() {
                         'q'
                     )}
                 </div>
-                <div className="pre_urvey-box">
+                <div className="pre_survey-box">
                     {renderLikertQuestion(
                         6,
                         '이 인터페이스는 메시지를 작성하는 데 유용했다.',

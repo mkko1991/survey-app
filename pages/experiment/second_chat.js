@@ -75,7 +75,7 @@ export default function SecondChat() {
                                         <div key={actualIndex}>
                                             <img
                                                 onClick={(e) => onClickImage(actualIndex, e)}
-                                                className={activeIndex === actualIndex ? 'imoji-img active' : 'imoji-img'}
+                                                className={activeIndex === actualIndex ? 'second_imoji-img second_active' : 'second_imoji-img'}
                                                 src={item}
                                                 alt=""
                                             />
