@@ -1,4 +1,4 @@
-.first_main {
+.second_main {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
@@ -11,7 +11,7 @@
     }
 }
 
-.first_background {
+.second_background {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,17 +19,17 @@
     z-index: -1;
 }
 
-.first_status {
+.second_status {
     top: 0;
     left: 0;
     width: 100%;
 }
 
-.first_center {
+.second_center {
     top: 75px;
     width: 100%;
 }
 
-.first_button {
+.second_button {
     width: 100%;
 }

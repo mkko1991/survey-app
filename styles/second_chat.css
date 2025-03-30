@@ -1,4 +1,4 @@
-.chat-container {
+.second_chat-container {
     width: 100%;
     position: relative;
     height: 90dvh;
@@ -10,23 +10,23 @@
 }
 
 
-.status_bar {
+.second_status_bar {
     width: 100%;
     height: 59px;
 }
 
-.status_bar2 {
+.second_status_bar2 {
     width: 100%;
     height: 59px;
 }
 
-.messages {
+.second_messages {
     flex: 1;
     overflow-y: auto;
     padding: 1rem;
 }
 
-.imoji-container {
+.second_imoji-container {
     position: absolute;
     bottom: 32px;
     left: 0;
@@ -38,7 +38,7 @@
     flex-direction: column;
 }
 
-.select-box {
+.second_select-box {
     width: 100%;
     height: 30px;
     display: flex;
@@ -48,7 +48,7 @@
 
 }
 
-.chat-box {
+.second_chat-box {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -56,19 +56,19 @@
     gap: 10px;
 }
 
-.chat-image {
+.second_chat-image {
     display: inline-block;
     width: 112px;
     height: 100px;
     margin-right: 20px;
 }
 
-.chat-image img {
+.second_chat-image img {
     width: 100%;
     height: 100%;
 }
 
-.chat-text {
+.second_chat-text {
     display: inline-block;
     background: #FEE500;
     padding: 5px 12px 5px 12px;
@@ -76,7 +76,7 @@
     margin-right: 20px;
 }
 
-.chip {
+.second_chip {
     margin: auto;
     border: 1px;
     border-radius: 46px;
@@ -84,35 +84,35 @@
     padding: 8px 16px 8px 16px;
 }
 
-.imoji-img {
+.second_imoji-img {
     width: 86px;
     height: 86px;
     cursor: pointer;
 }
 
-.imoji-img.active {
+.second_imoji-img.second_active {
     border: 2px solid #FEE500;
     border-radius: 16px;
 }
 
-.chip.selected {
+.second_chip.second_selected {
     border: 1px solid #191919;
 }
 
-.imoji-box {
+.second_imoji-box {
     width: 100%;
     height: 172px;
 }
 
-.imoji-line {
+.second_imoji-line {
     display: flex;
 }
 
-.imoji {
+.second_imoji {
     margin: auto
 }
 
-.input-box {
+.second_input-box {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -126,7 +126,7 @@
     background-color: #ffffff;
 }
 
-.next-button {
+.second_next-button {
     position: absolute;
     bottom: 45px;
     left: 0;
@@ -140,7 +140,7 @@
     cursor: pointer;
 }
 
-.input-box input {
+.second_input-box input {
     width: 100%;
     font-size: 1rem;
     outline: none;
@@ -151,48 +151,48 @@
     background-color: #EFEFEF;
 }
 
-.input-line {
+.second_input-line {
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
 }
 
-.plus {
+.second_plus {
     width: 10%;
     margin: auto;
 }
 
-.text-box {
+.second_text-box {
     width: 80%;
     margin: auto;
     display: flex;
 }
 
-.smile {
+.second_smile {
     width: 10%;
     margin: auto;
 }
 
-.send {
+.second_send {
     width: 10%;
     margin: auto;
     cursor: pointer;
 }
 
-.shop {
+.second_shop {
     width: 10%;
     margin: auto;
 }
 
 
-.wrapper {
+.second_wrapper {
     position: relative;
     width: 100%;
     margin: 20px auto;
 }
 
-.input {
+.second_input {
     color: black;
     font-family: inherit;
     line-height: 1.5;
@@ -211,26 +211,26 @@
     z-index: 1;
 }
 
-.sticker-scroll {
+.second_sticker-scroll {
     padding: 12px;
     overflow-y: auto;
     flex: 1;
 }
 
-.category {
+.second_category {
     font-weight: bold;
     margin: 12px 0 4px;
     color: #666;
     font-size: 14px;
 }
 
-.grid {
+.second_grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 12px;
 }
 
-.grid img {
+.second_grid img {
     width: 100%;
     border-radius: 8px;
     cursor: pointer;

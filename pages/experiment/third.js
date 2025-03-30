@@ -1,4 +1,3 @@
-import "@/styles/first.css"
 import {useRouter} from "next/router";
 
 export default function Third() {
@@ -9,11 +8,11 @@ export default function Third() {
     };
 
     return (
-        <main className="main">
-            <img className="background" src="/global/background.png"/>
-            <img className="status" src="/global/status.png"/>
-            <img className="center" src="/third/center.png"/>
-            <img onClick={handleSubmit} className="button" src="/global/button.png"/>
+        <main className="third_main">
+            <img className="third_background" src="/global/background.png"/>
+            <img className="third_status" src="/global/status.png"/>
+            <img className="third_center" src="/third/center.png"/>
+            <img onClick={handleSubmit} className="third_button" src="/global/button.png"/>
         </main>
     );
 }

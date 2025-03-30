@@ -2,7 +2,6 @@
 // 27 ~ 35
 // 36 ~ 44
 import {useRouter} from "next/router";
-import "@/styles/pre_survey.css"
 import {useSurveyStore} from "@/store/survey";
 
 export default function Second_survey() {

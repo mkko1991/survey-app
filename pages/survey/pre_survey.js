@@ -1,6 +1,5 @@
 import {useRouter} from "next/router";
 import {useSurveyStore} from "@/store/survey";
-import "@/styles/pre_survey.css"
 
 export default function PreSurvey() {
     const router = useRouter();
@@ -123,9 +122,9 @@ export default function PreSurvey() {
 
     const renderLikertQuestion = (number, text, name) => {
         return (
-            <div className="likert-question">
-                <p>{number}. {text} <span className="required">*</span></p>
-                <div className="likert-scale">
+            <div className="pre_likert-question">
+                <p>{number}. {text} <span className="pre_required">*</span></p>
+                <div className="pre_likert-scale">
                     {[1, 2, 3, 4, 5].map((val) => (
                         <label key={val}>
                             <input
@@ -138,7 +137,7 @@ export default function PreSurvey() {
                         </label>
                     ))}
                 </div>
-                <div className="likert-labels">
+                <div className="pre_likert-labels">
                     <span>전혀 그렇지 않다</span>
                     <span>매우 그렇다</span>
                 </div>
@@ -149,27 +148,27 @@ export default function PreSurvey() {
 
 
     return (
-        <div className="survey-wrapper">
-            <div className="survey-container">
-                <div className="survey-header">개인정보 입력</div>
-                <div className="survey-box">
-                    <div className="survey-question">
+        <div className="pre_survey-wrapper">
+            <div className="pre_survey-container">
+                <div className="pre_survey-header">개인정보 입력</div>
+                <div className="pre_survey-box">
+                    <div className="pre_survey-question">
                         <p>귀하의 이메일을 입력해주세요</p>
                         <input onChange={(e) => setEmail(e.target.value)}/>
                     </div>
 
-                    <div className="survey-question">
+                    <div className="pre_survey-question">
                         <p>귀하의 핸드폰 번호를 입력해주세요</p>
                         <input onChange={(e) => setPhone(e.target.value)}/>
                     </div>
                 </div>
 
-                <div className="survey-header">인구통계학적 특성에 관한 질문</div>
+                <div className="pre_survey-header">인구통계학적 특성에 관한 질문</div>
 
-                <div className="survey-box">
-                    <div className="survey-question">
+                <div className="pre_survey-box">
+                    <div className="pre_survey-question">
                         <p>1. 귀하의 성별을 선택해 주세요</p>
-                        <div className="survey-options">
+                        <div className="pre_survey-options">
                             <label>
                                 <input
                                     type="radio"
@@ -191,9 +190,9 @@ export default function PreSurvey() {
                         </div>
                     </div>
 
-                    <div className="survey-question">
+                    <div className="pre_survey-question">
                         <p>2. 귀하의 연령대를 선택해 주세요. (만 나이 기준)</p>
-                        <div className="survey-options">
+                        <div className="pre_survey-options">
                             {['10대', '20대', '30대', '40대', '50대 이상'].map((age) => (
                                 <label key={age}>
                                     <input
@@ -208,9 +207,9 @@ export default function PreSurvey() {
                         </div>
                     </div>
 
-                    <div className="survey-question">
+                    <div className="pre_survey-question">
                         <p>3. 귀하의 직업을 선택해 주세요.</p>
-                        <div className="survey-options">
+                        <div className="pre_survey-options">
                             {['사무직', '생산/기술직', '전문직', '서비스/영업직', '자영업', '무직', '학생', '전업주부', '기타'].map((job) => (
                                 <label key={job}>
                                     <input
@@ -225,9 +224,9 @@ export default function PreSurvey() {
                     </div>
                 </div>
 
-                <div className="survey-header">성향에 관한 질문</div>
+                <div className="pre_survey-header">성향에 관한 질문</div>
 
-                <div className="survey-box">
+                <div className="pre_survey-box">
                     {renderLikertQuestion(
                         4,
                         '나는 종종 내가 희망하고 열망하는 것을 어떻게 이룰 수 있을지 상상한다.',
@@ -280,12 +279,12 @@ export default function PreSurvey() {
                     )}
                 </div>
 
-                <div className="survey-header">이모티콘 이용 빈도에 관한 질문</div>
+                <div className="pre_survey-header">이모티콘 이용 빈도에 관한 질문</div>
 
-                <div className="survey-box">
-                    <div className="survey-question">
+                <div className="pre_survey-box">
+                    <div className="pre_survey-question">
                         <p>14. 평소 모바일 메신저를 하루에 얼마나 자주 사용하시나요?</p>
-                        <div className="survey-options">
+                        <div className="pre_survey-options">
                             {[
                                 '1시간 미만',
                                 '1시간 ~ 2시간',
@@ -307,9 +306,9 @@ export default function PreSurvey() {
                         </div>
                     </div>
 
-                    <div className="survey-question">
+                    <div className="pre_survey-question">
                         <p>15. 평소 모바일 메신저에서 이모티콘을 얼마나 자주 사용하시나요?</p>
-                        <div className="survey-options">
+                        <div className="pre_survey-options">
                             {[
                                 '거의 사용하지 않는다',
                                 '가끔 사용한다 (10건 중 1~2건)',
@@ -330,9 +329,9 @@ export default function PreSurvey() {
                         </div>
                     </div>
 
-                    <div className="survey-question">
-                        <p>16. 평소 가장 자주 사용하는 메신저 앱을 선택해 주세요. <span className="required">(최대 2개)</span></p>
-                        <div className="survey-options">
+                    <div className="pre_survey-question">
+                        <p>16. 평소 가장 자주 사용하는 메신저 앱을 선택해 주세요. <span className="pre_required">(최대 2개)</span></p>
+                        <div className="pre_survey-options">
                             {apps.map((opt) => {
                                 const isChecked = platforms.includes(opt);
                                 return (
@@ -363,7 +362,7 @@ export default function PreSurvey() {
                             {isOtherChecked && (
                                 <input
                                     type="text"
-                                    className="other-input"
+                                    className="pre_other-input"
                                     placeholder="앱 이름을 입력해 주세요"
                                     onChange={(e) => setPlatformEtc(e.target.value)}
                                 />
@@ -371,14 +370,14 @@ export default function PreSurvey() {
                         </div>
                     </div>
 
-                    <div className="survey-question">
-                        <p>17. 선호하는 이모티콘 선택 <span className="required">(필수★ 2개 선택해 주세요)</span></p>
-                        <div className="emoji-grid">
+                    <div className="pre_survey-question">
+                        <p>17. 선호하는 이모티콘 선택 <span className="pre_required">(필수★ 2개 선택해 주세요)</span></p>
+                        <div className="pre_emoji-grid">
                             {emojis.map((emoji) => {
                                 const isChecked = favoriteEmojis.includes(emoji);
                                 const isLimitReached = favoriteEmojis.length >= 2 && !isChecked;
                                 return (
-                                    <label key={emoji} className="emoji-option">
+                                    <label key={emoji} className="pre_emoji-option">
                                         <input
                                             type="checkbox"
                                             name="q17"
@@ -394,7 +393,7 @@ export default function PreSurvey() {
                         </div>
                     </div>
                 </div>
-                <div className="survey-box">
+                <div className="pre_survey-box">
                     <p>사용자 경험 시작하기</p>
                     <button onClick={ableNextStep}>시작</button>
                 </div>

@@ -1,4 +1,3 @@
-import "@/styles/last.css"
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {useSurveyStore} from "@/store/survey.js";

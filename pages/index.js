@@ -1,6 +1,5 @@
 import {useRouter} from "next/router";
 import {useSurveyStore} from "@/store/survey";
-import "@/styles/index.css"
 import {useState} from "react";
 
 export default function SurveyForm() {

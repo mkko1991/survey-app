@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {useRouter} from "next/router";
-import "@/styles/first_chat.css"
 
 export default function FirstChat() {
     const router = useRouter();
@@ -72,37 +71,37 @@ export default function FirstChat() {
     }
 
     return (
-        <div className="chat-container">
+        <div className="first_chat-container">
 
             <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-            <img src="/first_chat/status_bar.png" className="status_bar"/>
-            <img src="/first_chat/status_bar2.png" className="status_bar2"/>
+            <img src="/first_chat/status_bar.png" className="first_status_bar"/>
+            <img src="/first_chat/status_bar2.png" className="first_status_bar2"/>
 
-            {end && <div className="chat-box">
-                <div className="chat-image">
+            {end && <div className="first_chat-box">
+                <div className="first_chat-image">
                     <img src={selectedImage}/>
                 </div>
-                <div className="chat-text">
+                <div className="first_chat-text">
                     {input}
                 </div>
             </div>}
 
-            {isFocused && !end && (<div className="imoji-container">
-                <div className="select-box">
-                    <div className="chip selected">생일</div>
-                    <div className="chip">축하</div>
-                    <div className="chip">축하케이크</div>
-                    <div className="chip">폭죽</div>
-                    <div className="chip">선물</div>
+            {isFocused && !end && (<div className="first_imoji-container">
+                <div className="first_select-box">
+                    <div className="first_chip selected">생일</div>
+                    <div className="first_chip">축하</div>
+                    <div className="first_chip">축하케이크</div>
+                    <div className="first_chip">폭죽</div>
+                    <div className="first_chip">선물</div>
                 </div>
-                    <div className="imoji-box">
+                    <div className="first_imoji-box">
                     {chunkArray(items, 4).map((group, lineIndex) => (
-                        <div key={`line-${lineIndex}`} className="imoji-line">
+                        <div key={`line-${lineIndex}`} className="first_imoji-line">
                             {group.map((item, indexInGroup) => {
                                 const actualIndex = lineIndex * 4 + indexInGroup;
                                 return (
-                                    <div key={actualIndex} className="imoji">
+                                    <div key={actualIndex} className="first_imoji">
                                         <img
                                             onClick={(e) => onClickImage(actualIndex, e)}
                                             className={activeIndex === actualIndex ? 'imoji-img active' : 'imoji-img'}
@@ -117,32 +116,32 @@ export default function FirstChat() {
                 </div>
             </div>
             )}
-            {!end && <div className="input-box">
-                <div className="input-line">
-                    <div className="plus">
+            {!end && <div className="first_input-box">
+                <div className="first_input-line">
+                    <div className="first_plus">
                         <img src="/first_chat/plus.png"/>
                     </div>
-                    <div className="text-box">
-                        <div className="wrapper">
+                    <div className="first_text-box">
+                        <div className="first_wrapper">
                             <div
-                                className="highlighter"
+                                className="first_highlighter"
                                 dangerouslySetInnerHTML={{ __html: highlight(input) + '\u200b' }} // ZWSP: 커서 깨짐 방지
                             />
                             <textarea
-                                className="input"
+                                className="first_input"
                                 value={input}
                                 onChange={handleChange}
                             />
                         </div>
                     </div>
-                    <div className="smile">
+                    <div className="first_smile">
                         <img src="/first_chat/smile.png"/>
                     </div>
                     {activeIndex != null ?
-                        <div className="send" onClick={() => setEnd(true)}>
+                        <div className="first_send" onClick={() => setEnd(true)}>
                             <img src="/first_chat/send.png"/>
                         </div> :
-                        <div className="shop">
+                        <div className="first_shop">
                             <img src="/first_chat/shop.png"/>
                         </div>
                     }

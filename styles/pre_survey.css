@@ -1,16 +1,16 @@
-.survey-wrapper {
+.pre_survey-wrapper {
     min-height: 100vh;
     background: #f3f4f6;
     padding: 40px 16px;
     font-family: sans-serif;
 }
 
-.survey-container {
+.pre_survey-container {
     max-width: 600px;
     margin: 0 auto;
 }
 
-.survey-header {
+.pre_survey-header {
     background-color: #6b46c1;
     color: white;
     padding: 16px 24px;
@@ -20,7 +20,7 @@
     border-top-right-radius: 6px;
 }
 
-.survey-box {
+.pre_survey-box {
     background: white;
     border: 1px solid #d6bcfa;
     border-top: none;
@@ -29,37 +29,37 @@
     padding: 24px;
 }
 
-.survey-question {
+.pre_survey-question {
     margin-bottom: 32px;
 }
 
-.survey-question p {
+.pre_survey-question p {
     font-weight: 600;
     margin-bottom: 12px;
 }
 
-.survey-options label {
+.pre_survey-options label {
     display: block;
     margin-bottom: 8px;
     cursor: pointer;
 }
 
-.survey-options input[type='radio'] {
+.pre_survey-options input[type='radio'] {
     margin-right: 8px;
 }
 
-.likert-question {
+.pre_likert-question {
     margin-bottom: 32px;
     padding-bottom: 16px;
     border-bottom: 1px solid #eee;
 }
 
-.likert-question p {
+.pre_likert-question p {
     font-weight: 600;
     margin-bottom: 12px;
 }
 
-.likert-scale {
+.pre_likert-scale {
     display: flex;
     justify-content: space-between;
     max-width: 400px;
@@ -67,7 +67,7 @@
     margin-bottom: 8px;
 }
 
-.likert-scale label {
+.pre_likert-scale label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,12 +75,12 @@
     color: #444;
 }
 
-.likert-scale input[type="radio"] {
+.pre_likert-scale input[type="radio"] {
     margin-bottom: 4px;
     accent-color: #6b46c1; /* 보라색 원 */
 }
 
-.likert-labels {
+.pre_likert-labels {
     display: flex;
     justify-content: space-between;
     font-size: 13px;
@@ -89,20 +89,20 @@
     margin: 0 auto;
 }
 
-.required {
+.pre_required {
     color: red;
     font-weight: bold;
     margin-left: 4px;
 }
 
-.emoji-grid {
+.pre_emoji-grid {
     position: relative;
     display: block;
     gap: 16px;
     margin-top: 12px;
 }
 
-.emoji-option {
+.pre_emoji-option {
     margin: auto;
     display: inline-block;
     align-items: center;
@@ -115,14 +115,14 @@
     transition: background 0.2s ease;
 }
 
-.emoji-option:hover {
+.pre_emoji-option:hover {
     background-color: #f0e7ff;
 }
 
-.emoji-option input[type="checkbox"] {
+.pre_emoji-option input[type="checkbox"] {
     accent-color: #673ab7;
 }
 
-.emoji-option span {
+.pre_emoji-option span {
     font-size: 16px;
 }
