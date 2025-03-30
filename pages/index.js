@@ -2,19 +2,20 @@ import {useRouter} from "next/router";
 import {useSurveyStore} from "@/store/survey";
 import {useState} from "react";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     return {
-        props: { time: new Date().toISOString() },
+        props: {
+            now: new Date().toISOString(),
+        },
     };
 }
 
-export default function SurveyForm({time}) {
+export default function SurveyForm() {
     const { name, age, setName, setAge } = useSurveyStore();
     const router = useRouter();
     const [check, setCheck] = useState(false);
 
     const handleSubmit = (e) => {
-        console.log(time);
         router.push('/survey/pre_survey');
     };
 
