@@ -1,12 +1,24 @@
+// pages/index.js
+import {useRouter} from "next/router";
+import {useEffect} from "react";
+
 export async function getServerSideProps() {
     return {
-        redirect: {
-            destination: '/survey/greetings', // 또는 네가 원하는 메인 페이지
-            permanent: false,
+        props: {
+            now: new Date().toISOString(),
         },
     };
 }
 
 export default function Home() {
-   return null;
+    const router = useRouter();
+    useEffect(() => {
+        router.replace('/survey/greetings');
+    }, []);
+    return (
+        <main>
+            <p>현재 시간: {now}</p>
+            <p>리디렉션 중입니다...</p>
+        </main>
+    );
 }
