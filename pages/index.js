@@ -2,6 +2,7 @@ import {useRouter} from "next/router";
 import {useEffect} from "react";
 
 export async function getServerSideProps() {
+    console.log("SSR ENV VAR:", process.env.MY_AWS_ACCESS_KEY_ID); // 🔍 CloudWatch에 찍힘
     return {
         props: {
             now: new Date().toISOString(),
