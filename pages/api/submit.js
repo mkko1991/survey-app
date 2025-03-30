@@ -1,8 +1,11 @@
 import AWS from 'aws-sdk';
 
-const ddb = new AWS.DynamoDB.DocumentClient({
-    region: process.env.MY_AWS_REGION,
+AWS.config.update({
+    region: process.env.MY_AWS_REGION || 'ap-northeast-2',
+    credentials: new AWS.EnvironmentCredentials('AWS') // 🔥 핵심 줄
 });
+
+const ddb = new AWS.DynamoDB.DocumentClient();
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
