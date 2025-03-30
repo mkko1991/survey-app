@@ -374,15 +374,15 @@ export default function PreSurvey() {
                         <p>17. 선호하는 이모티콘 선택 <span className="pre_required">(필수★ 2개 선택해 주세요)</span></p>
                         <div className="pre_emoji-grid">
                             {emojis.map((emoji) => {
-                                const isChecked = favoriteEmojis.includes(emoji);
-                                const isLimitReached = favoriteEmojis.length >= 2 && !isChecked;
+                                const isEmojiChecked = favoriteEmojis.includes(emoji);
+                                const isLimitReached = favoriteEmojis.length >= 2 && !isEmojiChecked;
                                 return (
                                     <label key={emoji} className="pre_emoji-option">
                                         <input
                                             type="checkbox"
                                             name="q17"
                                             value={emoji}
-                                            checked={isChecked}
+                                            checked={isEmojiChecked}
                                             onChange={onChangeEmoji}
                                             disabled={isLimitReached}
                                         />
