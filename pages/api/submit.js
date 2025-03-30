@@ -1,11 +1,10 @@
-import AWS from 'aws-sdk';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { PutCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
 
-AWS.config.update({
+const client = new DynamoDBClient({
     region: process.env.MY_AWS_REGION || 'ap-northeast-2',
-    credentials: new AWS.EnvironmentCredentials('AWS') // 🔥 핵심 줄
 });
-
-const ddb = new AWS.DynamoDB.DocumentClient();
+const ddbDocClient = DynamoDBDocumentClient.from(client);
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
@@ -21,10 +20,10 @@ export default async function handler(req, res) {
         };
 
         try {
-            await ddb.put(params).promise();
+            await ddbDocClient.send(new PutCommand(params));
             res.status(200).json({ message: 'User saved!' });
         } catch (err) {
-            console.error('DynamoDB error:', err);
+            console.error('🔥 DynamoDB error:', err);
             res.status(500).json({ error: 'Failed to save user' });
         }
     } else {
