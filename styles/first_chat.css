@@ -1,0 +1,227 @@
+.chat-container {
+    width: 100%;
+    position: relative;
+    height: 90dvh;
+    background-color: #c0cde3;
+
+    @supports not (height: 90dvh) {
+        height: 90vh;
+    }
+}
+
+
+.status_bar {
+    width: 100%;
+    height: 59px;
+}
+
+.status_bar2 {
+    width: 100%;
+    height: 59px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.imoji-container {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    width: 100%;
+    height: 230px;
+    background-color: #ffffff;
+}
+
+.select-box {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.chat-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.chat-image {
+    display: inline-block;
+    width: 112px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.chat-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.chat-text {
+    display: inline-block;
+    background: #FEE500;
+    padding: 5px 12px 5px 12px;
+    border-radius: 13px;
+    margin-right: 20px;
+}
+
+.chip {
+    margin: auto;
+    border: 1px;
+    border-radius: 46px;
+    border: 1px solid #C9C7C7;
+    padding: 8px 16px 8px 16px;
+}
+
+.imoji-img {
+    cursor: pointer;
+}
+
+.imoji-img.active {
+    border: 2px solid #FEE500;
+    border-radius: 16px;
+}
+
+.chip.selected {
+    border: 1px solid #191919;
+}
+
+.imoji-box {
+    width: 100%;
+    height: 172px;
+}
+
+.imoji-line {
+    display: flex;
+}
+
+.imoji {
+    margin: auto
+}
+
+.input-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding: 0px;
+    border-width: 0px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.next-button {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding: 0px;
+    border-width: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.input-box input {
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding: 0px;
+    border-width: 0px;
+    background-color: #EFEFEF;
+}
+
+.input-line {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus {
+    width: 10%;
+    margin: auto;
+}
+
+.text-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.smile {
+    width: 10%;
+    margin: auto;
+}
+
+.send {
+    width: 10%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.shop {
+    width: 10%;
+    margin: auto;
+}
+
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.highlighter,
+.input {
+    font-size: 16px;
+    font-family: inherit;
+    line-height: 1.5;
+    padding: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.highlighter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    z-index: 1;
+    pointer-events: none;
+    background-color: white;
+}
+
+/* 텍스트에만 색칠하기 위해 span만 색 지정 */
+.highlighter .highlight {
+    color: #1A6DFF;
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-color: #1A6DFF;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    color:  transparent;
+    caret-color: black;
+    position: relative;
+    z-index: 2;
+}

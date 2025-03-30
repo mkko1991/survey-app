@@ -1,0 +1,45 @@
+.body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    color: #333;
+}
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.1rem;
+    color: #555;
+}
+ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+ul li::before {
+    content: "✅ ";
+    color: green;
+}
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+.emoji-bullet {
+    margin-top: 1rem;
+}
+.emoji-bullet p {
+    margin: 0.5rem 0;
+}
+.footer {
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid gray;
+}

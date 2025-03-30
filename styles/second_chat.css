@@ -1,0 +1,238 @@
+.chat-container {
+    width: 100%;
+    position: relative;
+    height: 90dvh;
+    background-color: #c0cde3;
+
+    @supports not (height: 90dvh) {
+        height: 90vh;
+    }
+}
+
+
+.status_bar {
+    width: 100%;
+    height: 59px;
+}
+
+.status_bar2 {
+    width: 100%;
+    height: 59px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.imoji-container {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    width: 100%;
+    height: 230px;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-box {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    color: #86868E;
+    font-size: 13px;
+    padding: 10px;
+
+}
+
+.chat-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.chat-image {
+    display: inline-block;
+    width: 112px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.chat-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.chat-text {
+    display: inline-block;
+    background: #FEE500;
+    padding: 5px 12px 5px 12px;
+    border-radius: 13px;
+    margin-right: 20px;
+}
+
+.chip {
+    margin: auto;
+    border: 1px;
+    border-radius: 46px;
+    border: 1px solid #C9C7C7;
+    padding: 8px 16px 8px 16px;
+}
+
+.imoji-img {
+    width: 86px;
+    height: 86px;
+    cursor: pointer;
+}
+
+.imoji-img.active {
+    border: 2px solid #FEE500;
+    border-radius: 16px;
+}
+
+.chip.selected {
+    border: 1px solid #191919;
+}
+
+.imoji-box {
+    width: 100%;
+    height: 172px;
+}
+
+.imoji-line {
+    display: flex;
+}
+
+.imoji {
+    margin: auto
+}
+
+.input-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding: 0px;
+    border-width: 0px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.next-button {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding: 0px;
+    border-width: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.input-box input {
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    padding-block: 0px;
+    padding-inline: 0px;
+    padding: 0px;
+    border-width: 0px;
+    background-color: #EFEFEF;
+}
+
+.input-line {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus {
+    width: 10%;
+    margin: auto;
+}
+
+.text-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.smile {
+    width: 10%;
+    margin: auto;
+}
+
+.send {
+    width: 10%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.shop {
+    width: 10%;
+    margin: auto;
+}
+
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.input {
+    color: black;
+    font-family: inherit;
+    line-height: 1.5;
+    padding: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    outline: none;
+    resize: none;
+    caret-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.sticker-scroll {
+    padding: 12px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.category {
+    font-weight: bold;
+    margin: 12px 0 4px;
+    color: #666;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 12px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: contain;
+}
