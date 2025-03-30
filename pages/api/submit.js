@@ -1,8 +1,10 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { PutCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
+import { defaultProvider } from "@aws-sdk/credential-provider-node";
 
 const client = new DynamoDBClient({
     region: process.env.MY_AWS_REGION || 'ap-northeast-2',
+    credentials: defaultProvider()  // 🔥 강제로 credential chain 전체 활성화
 });
 const ddbDocClient = DynamoDBDocumentClient.from(client);
 
