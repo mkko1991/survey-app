@@ -80,7 +80,7 @@ export default function PreSurvey() {
         const {value} = e.target;
         let copiedEmojis = favoriteEmojis;
 
-        if (!copiedEmojis.includes(value) && copiedEmojis.length <= 2) copiedEmojis.push(value);
+        if (!copiedEmojis.includes(value)) copiedEmojis.push(value);
         else {
             copiedEmojis = copiedEmojis.filter(p => p !== value);
         }
@@ -107,9 +107,40 @@ export default function PreSurvey() {
                 const fileList = await (getFileList("/emoticon/fourth"));
                 recommendedEmojis.push(...fileList);
             }
+
+            if (emoji.includes("fifth")) {
+                const fileList = await (getFileList("/emoticon/fifth"));
+                recommendedEmojis.push(...fileList);
+            }
+
+            if (emoji.includes("sixth")) {
+                const fileList = await (getFileList("/emoticon/sixth"));
+                recommendedEmojis.push(...fileList);
+            }
+
+            if (emoji.includes("seventh")) {
+                const fileList = await (getFileList("/emoticon/seventh"));
+                recommendedEmojis.push(...fileList);
+            }
+
+            if (emoji.includes("eighth")) {
+                const fileList = await (getFileList("/emoticon/eighth"));
+                recommendedEmojis.push(...fileList);
+            }
+
+            if (emoji.includes("ninth")) {
+                const fileList = await (getFileList("/emoticon/ninth"));
+                recommendedEmojis.push(...fileList);
+            }
+
+            if (emoji.includes("tenth")) {
+                const fileList = await (getFileList("/emoticon/tenth"));
+                recommendedEmojis.push(...fileList);
+            }
         }
 
         const shuffledEmojis = shuffle(recommendedEmojis);
+        console.log(recommendedEmojis);
         setFavoriteEmojis(copiedEmojis);
         setRecommendedEmojis(shuffledEmojis);
     }
