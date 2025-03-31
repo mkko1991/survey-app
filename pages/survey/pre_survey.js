@@ -42,6 +42,12 @@ export default function PreSurvey() {
         "/emoticon/second.png",
         "/emoticon/third.png",
         "/emoticon/fourth.png",
+        "/emoticon/fifth.png",
+        "/emoticon/sixth.png",
+        "/emoticon/seventh.png",
+        "/emoticon/eighth.png",
+        "/emoticon/ninth.png",
+        "/emoticon/tenth.png",
     ];
 
     const onChangePlatform = (e) => {
