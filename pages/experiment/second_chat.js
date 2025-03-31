@@ -72,14 +72,13 @@ export default function SecondChat() {
                                 {group.map((item, indexInGroup) => {
                                     const actualIndex = lineIndex * 4 + indexInGroup;
                                     return (
-                                        <div key={actualIndex}>
                                             <img
+                                                key={actualIndex}
                                                 onClick={(e) => onClickImage(actualIndex, e)}
                                                 className={activeIndex === actualIndex ? 'second_imoji-img second_active' : 'second_imoji-img'}
                                                 src={item}
                                                 alt=""
                                             />
-                                        </div>
                                     );
                                 })}
                             </div>

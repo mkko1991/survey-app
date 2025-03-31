@@ -225,13 +225,12 @@
 }
 
 .second_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    display: flex;
     gap: 12px;
 }
 
 .second_grid img {
-    width: 100%;
+    width: 20vw;
     border-radius: 8px;
     cursor: pointer;
     object-fit: contain;
