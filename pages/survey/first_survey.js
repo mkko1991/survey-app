@@ -113,7 +113,7 @@ export default function First_survey() {
                     )}
                 </div>
                 <div className="pre_survey-box">
-                    <button className={"pre_survey-next-button"} onClick={nextStep}>인터페이스 유형 실험 시작하기</button>
+                    <button className={"pre_survey-next-button"} onClick={nextStep}>다음 인터페이스 유형 실험 시작하기</button>
                 </div>
             </div>
         </div>
