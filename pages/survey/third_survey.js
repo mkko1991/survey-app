@@ -15,7 +15,7 @@ export default function Third_survey() {
     const renderLikertQuestion = (number, text, name) => {
         return (
             <div className="pre_likert-question">
-                <p>{number}. {text} <span className="pre_required">*</span></p>
+                <p>{number}. {text}</p>
                 <div className="pre_likert-scale">
                     {[1, 2, 3, 4, 5].map((val) => {
                         const key = name + (18 + (router.query.order - 1) * 9 + (number - 1));
@@ -114,7 +114,7 @@ export default function Third_survey() {
                 </div>
                 <div className="pre_survey-box">
                     <p>설문 마치고 정보 전송하기</p>
-                    <button onClick={nextStep}>다음</button>
+                    <button className={"pre_survey-next-button"} onClick={nextStep}>다음 인터페이스 유형 실험 시작하기</button>
                 </div>
             </div>
         </div>

@@ -15,8 +15,6 @@ export default function PreSurvey() {
         platforms,
         platformEtc,
         favoriteEmojis,
-        setEmail,
-        setPhone,
         setGender,
         setAge,
         setJob,
@@ -123,7 +121,7 @@ export default function PreSurvey() {
     const renderLikertQuestion = (number, text, name) => {
         return (
             <div className="pre_likert-question">
-                <p>{number}. {text} <span className="pre_required">*</span></p>
+                <p>{number}. {text}</p>
                 <div className="pre_likert-scale">
                     {[1, 2, 3, 4, 5].map((val) => (
                         <label key={val}>
@@ -150,19 +148,6 @@ export default function PreSurvey() {
     return (
         <div className="pre_survey-wrapper">
             <div className="pre_survey-container">
-                <div className="pre_survey-header">개인정보 입력</div>
-                <div className="pre_survey-box">
-                    <div className="pre_survey-question">
-                        <p>귀하의 이메일을 입력해주세요</p>
-                        <input onChange={(e) => setEmail(e.target.value)}/>
-                    </div>
-
-                    <div className="pre_survey-question">
-                        <p>귀하의 핸드폰 번호를 입력해주세요</p>
-                        <input onChange={(e) => setPhone(e.target.value)}/>
-                    </div>
-                </div>
-
                 <div className="pre_survey-header">인구통계학적 특성에 관한 질문</div>
 
                 <div className="pre_survey-box">
@@ -394,8 +379,7 @@ export default function PreSurvey() {
                     </div>
                 </div>
                 <div className="pre_survey-box">
-                    <p>사용자 경험 시작하기</p>
-                    <button onClick={ableNextStep}>시작</button>
+                    <button className={"pre_survey-next-button"} onClick={ableNextStep}>다음 인터페이스 유형 실험 시작하기</button>
                 </div>
             </div>
         </div>
