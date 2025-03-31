@@ -113,10 +113,7 @@ export default function First_survey() {
                     )}
                 </div>
                 <div className="pre_survey-box">
-                    {
-                        router.query.order !== "3" ? <p>다음 사용자 경험 시작하기</p> : <p>설문 마치고 정보 전송하기</p>
-                    }
-                    <button className={"pre_survey-next-button"} onClick={nextStep}>다음 인터페이스 유형 실험 시작하기</button>
+                    <button className={"pre_survey-next-button"} onClick={nextStep}>인터페이스 유형 실험 시작하기</button>
                 </div>
             </div>
         </div>

@@ -113,8 +113,7 @@ export default function Third_survey() {
                     )}
                 </div>
                 <div className="pre_survey-box">
-                    <p>설문 마치고 정보 전송하기</p>
-                    <button className={"pre_survey-next-button"} onClick={nextStep}>다음 인터페이스 유형 실험 시작하기</button>
+                    <button className={"pre_survey-next-button"} onClick={nextStep}>설문 마치기</button>
                 </div>
             </div>
         </div>
