@@ -120,7 +120,7 @@ export default function PreSurvey() {
         platforms,
             platformEtc,
             favoriteEmojis,*/
-        if (email && age && gender && job && usageTime && emojiFreq && (favoriteEmojis.length === 2)) router.push("/experiment/first");
+        if (email && age && gender && job && usageTime && emojiFreq && (favoriteEmojis.length >= 2)) router.push("/experiment/first");
         else alert("요구사항에 맞게 전부 입력해주세요.");
     }
 
@@ -362,11 +362,10 @@ export default function PreSurvey() {
                     </div>
 
                     <div className="pre_survey-question">
-                        <p>17. 선호하는 이모티콘 선택 <span className="pre_required">(필수★ 2개 선택해 주세요)</span></p>
+                        <p>17. 선호하는 이모티콘 선택 <span className="pre_required">(필수★ 2개 이상 선택해 주세요)</span></p>
                         <div className="pre_emoji-grid">
                             {emojis.map((emoji) => {
                                 const isEmojiChecked = favoriteEmojis.includes(emoji);
-                                const isLimitReached = favoriteEmojis.length >= 2 && !isEmojiChecked;
                                 return (
                                     <label key={emoji} className="pre_emoji-option">
                                         <input
@@ -375,7 +374,6 @@ export default function PreSurvey() {
                                             value={emoji}
                                             checked={isEmojiChecked}
                                             onChange={onChangeEmoji}
-                                            disabled={isLimitReached}
                                         />
                                         <img src={emoji}/>
                                     </label>
