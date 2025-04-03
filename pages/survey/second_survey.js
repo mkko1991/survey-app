@@ -41,7 +41,8 @@ export default function Second_survey() {
     };
 
     const nextStep = () => {
-        router.push("/experiment/third");
+        if (Object.keys(answers).length === 28) router.push("/experiment/third");
+        else alert("요구사항에 맞게 전부 입력해주세요.");
     }
 
     return (

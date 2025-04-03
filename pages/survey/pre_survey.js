@@ -147,11 +147,19 @@ export default function PreSurvey() {
 
     const ableNextStep = () => {
         // TODO 조건문 추가.
-        /* answers
-        platforms,
-            platformEtc,
-            favoriteEmojis,*/
-        if (email && age && gender && job && usageTime && emojiFreq && (favoriteEmojis.length >= 2)) router.push("/experiment/first");
+        console.log(Object.keys(answers).length);
+        if (
+            email &&
+            age &&
+            gender &&
+            job &&
+            usageTime &&
+            emojiFreq &&
+            (favoriteEmojis.length >= 2) &&
+            (platforms.length >=1 ) &&
+            (Object.keys(answers).length === 10) &&
+            (!isOtherChecked || (isOtherChecked && platformEtc))
+        ) router.push("/experiment/first");
         else alert("요구사항에 맞게 전부 입력해주세요.");
     }
 
