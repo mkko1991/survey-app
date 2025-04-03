@@ -41,8 +41,6 @@ export default function SurveyForm({message}) {
 
                 <br/>
 
-                <p>📅 설문 마감: <strong> 4월 2일(수) 밤 11:59까지 </strong></p>
-
                 <p>여러분의 응답은 실험에 직접 반영됩니다.</p>
                 <p><strong>신중한 참여 부탁드립니다!</strong> 🙏</p>
 
@@ -79,15 +77,10 @@ export default function SurveyForm({message}) {
                         <p>귀하의 이메일을 입력해주세요</p>
                         <input disabled={!check} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
-
-                    <div className="pre_survey-question">
-                        <p>귀하의 핸드폰 번호를 입력해주세요</p>
-                        <input disabled={!check} onChange={(e) => setPhone(e.target.value)}/>
-                    </div>
                 </div>
             </div>
 
-            <button className={"pre_survey-next-button"} type="submit" onClick={handleSubmit} disabled={!check || !email || !phone}>설문 시작</button>
+            <button className={"pre_survey-next-button"} type="submit" onClick={handleSubmit} disabled={!check || !email}>설문 시작</button>
         </main>
     );
 }

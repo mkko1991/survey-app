@@ -53,7 +53,7 @@ export default function Second_survey() {
                 <div className="pre_survey-box">
                     {renderLikertQuestion(
                         1,
-                        '이 인터페이스는 사용하기 쉬었다.',
+                        '이 인터페이스는 사용하기 쉬웠다.',
                         'q'
                     )}
                 </div>
@@ -109,7 +109,7 @@ export default function Second_survey() {
                 <div className="pre_survey-box">
                     {renderLikertQuestion(
                         9,
-                        '이 인터페이스는 내가 기대했던 수준에 부합했다.',
+                        '이 인터페이스는 내가 기대했던 수준에 충족했다.',
                         'q'
                     )}
                 </div>
