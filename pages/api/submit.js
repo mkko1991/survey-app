@@ -16,7 +16,7 @@ export default async function handler(req, res) {
             TableName: 'mjp',
             Item: {
                 email,
-                phone: "",
+                phone: "no phone",
                 data,
             },
         };
