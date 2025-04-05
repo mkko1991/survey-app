@@ -10,13 +10,13 @@ const ddbDocClient = DynamoDBDocumentClient.from(client);
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        const { email, phone, data } = req.body;
+        const { email, data } = req.body;
 
         const params = {
             TableName: 'mjp',
             Item: {
                 email,
-                phone,
+                phone: "",
                 data,
             },
         };
