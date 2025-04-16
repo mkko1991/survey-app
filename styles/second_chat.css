@@ -170,6 +170,7 @@
 }
 
 .second_smile {
+    position: relative;
     width: 10%;
     margin: auto;
 }
@@ -218,15 +219,25 @@
 }
 
 .second_category {
-    font-weight: bold;
-    margin: 12px 0 4px;
-    color: #666;
+    display: inline-block;
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 10px;
     font-size: 14px;
+    line-height: 1.5;
+
+    max-width: 100%;
+    word-break: keep-all;
+    white-space: normal;
+    box-sizing: border-box;
 }
 
 .second_grid {
     display: flex;
     gap: 12px;
+    margin: 10px 0px;
 }
 
 .second_grid img {
@@ -234,4 +245,21 @@
     border-radius: 8px;
     cursor: pointer;
     object-fit: contain;
+}
+
+.second_friend_chat {
+    margin-left: 20px;
+}
+
+.imoji_tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: -120%;
+    transform: translateX(-50%) translateY(-8px);
+    padding: 4px;
+    z-index: 10;
+}
+
+.imoji_tooltip-hide {
+    display: none;
 }

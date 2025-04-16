@@ -41,13 +41,14 @@ export default function First_survey() {
     };
 
     const nextStep = () => {
-        if (Object.keys(answers).length === 19) router.push("/experiment/second");
+        if (Object.keys(answers).length === 9) router.push("/experiment/second");
         else alert("요구사항에 맞게 전부 입력해주세요.");
     }
 
     return (
         <div className="pre_urvey-wrapper">
             <div className="pre_survey-container">
+                <img src="/first/survey.png" className="first_survey_header_img"/>
                 <div className="pre_survey-header">사용자 경험에 관한 질문</div>
 
                 <div className="pre_survey-box">

@@ -54,6 +54,7 @@ export default function SecondChat() {
 
             <img src="/first_chat/status_bar.png" className="second_status_bar"/>
             <img src="/first_chat/status_bar2.png" className="second_status_bar2"/>
+            <img src="/first_chat/friend_chat.png" className="second_friend_chat"/>
 
             {end && <div className="second_chat-box">
                 <div className="second_chat-image">
@@ -66,19 +67,21 @@ export default function SecondChat() {
 
             {isFocused && !end && (<div className="second_imoji-container">
                     <div className="second_sticker-scroll">
-                        <div className="second_category">나를 위한 추천 이모티콘</div>
+                        <div className="second_category">
+                            💡 <span>당신이 좋아할만한 추천 이모티콘</span>
+                        </div>
                         {chunkArray(recommendedEmojis, 4).map((group, lineIndex) => (
                             <div key={`line-${lineIndex}`} className="second_grid">
                                 {group.map((item, indexInGroup) => {
                                     const actualIndex = lineIndex * 4 + indexInGroup;
                                     return (
-                                            <img
-                                                key={actualIndex}
-                                                onClick={(e) => onClickImage(actualIndex, e)}
-                                                className={activeIndex === actualIndex ? 'second_imoji-img second_active' : 'second_imoji-img'}
-                                                src={item}
-                                                alt=""
-                                            />
+                                        <img
+                                            key={actualIndex}
+                                            onClick={(e) => onClickImage(actualIndex, e)}
+                                            className={activeIndex === actualIndex ? 'second_imoji-img second_active' : 'second_imoji-img'}
+                                            src={item}
+                                            alt=""
+                                        />
                                     );
                                 })}
                             </div>
@@ -101,6 +104,8 @@ export default function SecondChat() {
                         </div>
                     </div>
                     <div className="second_smile">
+                        <img src="/first_chat/tooltip.png"
+                             className={!isFocused ? "imoji_tooltip" : "imoji_tooltip-hide"}/>
                         <img src="/first_chat/smile.png" onClick={() => setIsFocused(!isFocused)}/>
                     </div>
                     {activeIndex != null ?

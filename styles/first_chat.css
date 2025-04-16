@@ -224,3 +224,7 @@
     position: relative;
     z-index: 2;
 }
+
+.first_friend_chat {
+    margin-left: 20px;
+}

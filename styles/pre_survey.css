@@ -137,3 +137,8 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.first_survey_header_img {
+    width: 100%;
+    margin: 10px 0;
+}

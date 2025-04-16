@@ -41,13 +41,14 @@ export default function Third_survey() {
     };
 
     const nextStep = () => {
-        if (Object.keys(answers).length === 37) router.push("/experiment/last");
+        if (Object.keys(answers).length === 27) router.push("/survey/last_survey");
         else alert("요구사항에 맞게 전부 입력해주세요.");
     }
 
     return (
         <div className="pre_survey-wrapper">
             <div className="pre_survey-container">
+                <img src="/first/survey.png" className="first_survey_header_img"/>
                 <div className="pre_survey-header">사용자 경험에 관한 질문</div>
 
                 <div className="pre_survey-box">
@@ -114,7 +115,7 @@ export default function Third_survey() {
                     )}
                 </div>
                 <div className="pre_survey-box">
-                    <button className={"pre_survey-next-button"} onClick={nextStep}>설문 마치기</button>
+                    <button className={"pre_survey-next-button"} onClick={nextStep}>다음 설문하기</button>
                 </div>
             </div>
         </div>

@@ -77,6 +77,7 @@ export default function FirstChat() {
 
             <img src="/first_chat/status_bar.png" className="first_status_bar"/>
             <img src="/first_chat/status_bar2.png" className="first_status_bar2"/>
+            <img src="/first_chat/friend_chat.png" className="first_friend_chat"/>
 
             {end && <div className="first_chat-box">
                 <div className="first_chat-image">
