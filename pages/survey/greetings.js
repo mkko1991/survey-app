@@ -75,7 +75,7 @@ export default function SurveyForm({message}) {
                 <div className="pre_survey-box" style={{"border-top": "1px solid #d6bcfa"}}>
                     <div className="pre_survey-question">
                         <p>귀하의 이메일을 입력해주세요</p>
-                        <input disabled={!check} onChange={(e) => setEmail(e.target.value)}/>
+                        <input type="text" style={{ fontSize: '16px' }} disabled={!check} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
                 </div>
             </div>

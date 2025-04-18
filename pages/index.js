@@ -17,7 +17,6 @@ export default function Home({now}) {
     }, []);
     return (
         <main>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
             <p>현재 시간: {now}</p>
             <p>리디렉션 중입니다...</p>
         </main>
