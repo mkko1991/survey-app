@@ -160,6 +160,7 @@ export default function ThirdChat() {
                     <div className="third_text-box">
                         <div className="third_wrapper">
                             <textarea
+                                style={{ fontSize: '16px' }}
                                 className="third_input"
                                 value={input}
                                 onChange={handleChange}

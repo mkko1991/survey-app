@@ -129,6 +129,7 @@ export default function FirstChat() {
                                 dangerouslySetInnerHTML={{ __html: highlight(input) + '\u200b' }} // ZWSP: 커서 깨짐 방지
                             />
                             <textarea
+                                style={{ fontSize: '16px' }}
                                 className="first_input"
                                 value={input}
                                 onChange={handleChange}

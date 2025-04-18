@@ -97,6 +97,7 @@ export default function SecondChat() {
                     <div className="second_text-box">
                         <div className="second_wrapper">
                             <textarea
+                                style={{ fontSize: '16px' }}
                                 className="second_input"
                                 value={input}
                                 onChange={handleChange}

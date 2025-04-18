@@ -401,6 +401,7 @@ export default function PreSurvey() {
                             </label>
                             {isOtherChecked && (
                                 <input
+                                    style={{ fontSize: '16px' }}
                                     type="text"
                                     className="pre_other-input"
                                     placeholder="앱 이름을 입력해 주세요"
