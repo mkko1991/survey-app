@@ -29,6 +29,10 @@
     padding: 24px;
 }
 
+.pre_survey-box.top {
+    border-top: 1px solid #d6bcfa;
+}
+
 .pre_survey-question {
     margin-bottom: 32px;
 }
@@ -141,4 +145,12 @@
 .first_survey_header_img {
     width: 100%;
     margin: 10px 0;
+}
+
+.pre_survey-imgbox {
+
+}
+
+.pre_survey-imgbox img {
+    width: 100%;
 }

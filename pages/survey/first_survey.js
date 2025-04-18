@@ -51,7 +51,8 @@ export default function First_survey() {
                 <img src="/first/survey.png" className="first_survey_header_img"/>
                 <div className="pre_survey-header">사용자 경험에 관한 질문</div>
 
-                <div className="pre_survey-box">
+                <div className="pre_survey-imgbox"><img src="/first/survey_1.png"/></div>
+                <div className="pre_survey-box top">
                     {renderLikertQuestion(
                         1,
                         '이 인터페이스는 사용하기 쉬웠다.',
@@ -72,38 +73,40 @@ export default function First_survey() {
                         'q'
                     )}
                 </div>
-                <div className="pre_survey-box">
+                <div className="pre_survey-imgbox"><img src="/first/survey_2.png"/></div>
+                <div className="pre_survey-box top">
                     {renderLikertQuestion(
                         4,
-                        '이 인터페이스는 메시지를 더 효율적으로 작성하는 데 도움이 되었다.',
+                        '이 인터페이스는 내가 원하는 이모티콘을 고르는 것을 용이하게 한다.',
                         'q'
                     )}
                 </div>
                 <div className="pre_survey-box">
                     {renderLikertQuestion(
                         5,
-                        '이 인터페이스는 내가 원하는 이모티콘을 쉽게 찾도록 도와주었다.',
+                        '이 인터페이스를 이용하면 이모티콘을 보다 잘 이용할 수 있을 것 같다.',
                         'q'
                     )}
                 </div>
                 <div className="pre_survey-box">
                     {renderLikertQuestion(
                         6,
-                        '이 인터페이스는 메시지를 작성하는 데 유용했다.',
+                        '이 인터페이스는 이모티콘을 사용하는 데 유용했다.',
                         'q'
                     )}
                 </div>
-                <div className="pre_survey-box">
+                <div className="pre_survey-imgbox"><img src="/first/survey_3.png"/></div>
+                <div className="pre_survey-box top">
                     {renderLikertQuestion(
                         7,
-                        '이 인터페이스를 사용하는 것이 전반적으로 만족스러웠다.',
+                        '이 인터페이스에서 제공하는 소통(인터랙션) 방식에 만족한다.',
                         'q'
                     )}
                 </div>
                 <div className="pre_survey-box">
                     {renderLikertQuestion(
                         8,
-                        '이 인터페이스에 대해 전반적으로 긍정적인 인상을 받았다.',
+                        '이 인터페이스 유형을 사용하는 과정 및 결과에 대해서 만족한다.',
                         'q'
                     )}
                 </div>
@@ -114,8 +117,8 @@ export default function First_survey() {
                         'q'
                     )}
                 </div>
-                <div className="pre_survey-box">
-                    <button className={"pre_survey-next-button"} onClick={nextStep}>다음 인터페이스 유형 실험 시작하기</button>
+                <div className="pre_survey-box top">
+                    <button className={"pre_survey-next-button"} onClick={nextStep}>다음 설문하기</button>
                 </div>
             </div>
         </div>
