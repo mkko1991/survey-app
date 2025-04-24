@@ -10,6 +10,36 @@ export default function SecondChat() {
     const [selectedImage, setSelectedImage] = useState('');
     const [activeIndex, setActiveIndex] = useState(null);
     const [end, setEnd] = useState(null);
+    const [activeTab, setActiveTab] = useState(1);
+
+    const smileEmojis = [
+        "/smile/kakao_friends_05.png",
+        "/smile/kakao_friends_06.png",
+        "/smile/kakao_friends_07.png",
+        "/smile/kakao_friends_08.png",
+        "/smile/kakao_friends_09.png",
+        "/smile/kakao_friends_10.png",
+        "/smile/kakao_friends_11.png",
+        "/smile/kakao_friends_12.png",
+        "/smile/set_1_img_07.png",
+        "/smile/set_1_img_08.png",
+        "/smile/set_2_img_07.png",
+        "/smile/set_2_img_08.png"
+    ];
+    const gifEmojis = [
+        "/gif/set_1_img_03.png",
+        "/gif/set_1_img_04.png",
+        "/gif/set_1_img_05.png",
+        "/gif/set_1_img_06.png",
+        "/gif/set_1_img_07.png",
+        "/gif/set_1_img_08.png",
+        "/gif/set_2_img_03.png",
+        "/gif/set_2_img_04.png",
+        "/gif/set_2_img_05.png",
+        "/gif/set_2_img_06.png",
+        "/gif/set_2_img_07.png",
+        "/gif/set_2_img_08.png"
+    ];
 
     useEffect(() => {
         window.addEventListener('focusin', () => {
@@ -47,6 +77,10 @@ export default function SecondChat() {
         })
     }
 
+    const onClickTab = (index, e) => {
+        setActiveTab(index);
+    }
+
     return (
         <div className="second_chat-container">
 
@@ -66,9 +100,20 @@ export default function SecondChat() {
             </div>}
 
             {isFocused && !end && (<div className="second_imoji-container">
-                    <div className="second_sticker-scroll">
+                    <div className="second_imoji-tab">
+                        <div className={activeTab === 1 ? "second_imoji-tab-box active" : "second_imoji-tab-box"} onClick={(e) => onClickTab(1)}>
+                            <img src="/tab/star.png"/>
+                        </div>
+                        <div className={activeTab === 2 ? "second_imoji-tab-box active" : "second_imoji-tab-box"} onClick={(e) => onClickTab(2)}>
+                            <img src="/tab/smile.png"/>
+                        </div>
+                        <div className={activeTab === 3 ? "second_imoji-tab-box active" : "second_imoji-tab-box"} onClick={(e) => onClickTab(3)}>
+                            <img src="/tab/gif.png"/>
+                        </div>
+                    </div>
+                    {activeTab === 1 && <div className="second_sticker-scroll">
                         <div className="second_category">
-                            💡 <span>당신이 좋아할만한 추천 이모티콘</span>
+                            <span>자주 쓰는 이모티콘</span>
                         </div>
                         {chunkArray(recommendedEmojis, 4).map((group, lineIndex) => (
                             <div key={`line-${lineIndex}`} className="second_grid">
@@ -86,7 +131,37 @@ export default function SecondChat() {
                                 })}
                             </div>
                         ))}
-                    </div>
+                    </div>}
+                    {activeTab === 2 && <div className="second_sticker-scroll">
+                        {chunkArray(smileEmojis, 4).map((group, lineIndex) => (
+                            <div key={`line-${lineIndex}`} className="second_grid">
+                                {group.map((item, indexInGroup) => {
+                                    return (
+                                        <img
+                                            className="second_imoji-img"
+                                            src={item}
+                                            alt=""
+                                        />
+                                    );
+                                })}
+                            </div>
+                        ))}
+                    </div>}
+                    {activeTab === 3 && <div className="second_sticker-scroll">
+                        {chunkArray(gifEmojis, 4).map((group, lineIndex) => (
+                            <div key={`line-${lineIndex}`} className="second_grid">
+                                {group.map((item, indexInGroup) => {
+                                    return (
+                                        <img
+                                            className="second_imoji-img"
+                                            src={item}
+                                            alt=""
+                                        />
+                                    );
+                                })}
+                            </div>
+                        ))}
+                    </div>}
                 </div>
             )}
             {!end && <div className="second_input-box">

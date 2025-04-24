@@ -223,15 +223,18 @@
     background-color: #f1f1f1;
     color: #333;
     font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 10px;
     font-size: 14px;
-    line-height: 1.5;
 
-    max-width: 100%;
     word-break: keep-all;
     white-space: normal;
     box-sizing: border-box;
+
+    width: 130px;
+    height: 27px;
+    gap: 10px;
+    border-radius: 6px;
+    padding: 5px 12px;
+    color: #656565;
 }
 
 .second_grid {
@@ -262,4 +265,27 @@
 
 .imoji_tooltip-hide {
     display: none;
+}
+
+.second_imoji-tab {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.second_imoji-tab-box {
+    width: 25%;
+    height: 35px;
+    display: flex;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.second_imoji-tab-box.active {
+    background-color: #E2E2E2;
+}
+
+.second_imoji-tab-box img {
+    margin: auto;
 }

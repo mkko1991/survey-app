@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {useRouter} from "next/router";
 
 export default function ThirdChat() {
@@ -8,6 +8,8 @@ export default function ThirdChat() {
     const [selectedImage, setSelectedImage] = useState('');
     const [activeIndex, setActiveIndex] = useState(null);
     const [end, setEnd] = useState(null);
+    const [activeTab, setActiveTab] = useState(1);
+    const categoryRefs = useRef([]);
 
     useEffect(() => {
         window.addEventListener('focusin', () => {
@@ -17,6 +19,38 @@ export default function ThirdChat() {
             document.body.classList.remove('keyboard-open');
         });
     }, []);
+
+    useEffect(() => {
+        const scrollContainer = document.querySelector('.third_sticker-scroll');
+
+        const handleScroll = () => {
+            if (!isUserScrolling.current) return;
+
+            const containerTop = scrollContainer.getBoundingClientRect().top;
+
+            let closestIndex = -1;
+            let closestDistance = Infinity;
+
+            categoryRefs.current.forEach((ref, index) => {
+                if (ref) {
+                    const top = ref.getBoundingClientRect().top;
+                    const distance = Math.abs(top - containerTop);
+
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestIndex = index;
+                    }
+                }
+            });
+
+            if (closestIndex !== -1 && activeTab !== closestIndex + 1) {
+                setActiveTab(closestIndex + 1);
+            }
+        };
+
+        scrollContainer?.addEventListener('scroll', handleScroll);
+        return () => scrollContainer?.removeEventListener('scroll', handleScroll);
+    }, [activeTab]);
 
     const handleChange = (e) => {
         const value = e.target.value;
@@ -46,6 +80,22 @@ export default function ThirdChat() {
         setEnd(true);
     }
 
+    const onClickTab = (index, e) => {
+        setActiveTab(index);
+        isUserScrolling.current = false;
+
+        const targetRef = categoryRefs.current[index - 1];
+        if (targetRef) {
+            targetRef.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            setTimeout(() => {
+                isUserScrolling.current = true;
+            }, 500);
+        }
+    }
+
+    const isUserScrolling = useRef(true);
+
     return (
         <div className="third_chat-container">
 
@@ -65,8 +115,33 @@ export default function ThirdChat() {
             </div>}
 
             {isFocused && !end && (<div className="third_imoji-container">
+                    <div className="thrid_imoji-tab">
+                        <div className={activeTab === 1 ? "third_imoji-tab-box active" : "third_imoji-tab-box"} onClick={(e) => onClickTab(1)}>
+                            <img src="/tab/hello.png"/>
+                        </div>
+                        <div className={activeTab === 2 ? "third_imoji-tab-box active" : "third_imoji-tab-box"} onClick={(e) => onClickTab(2)}>
+                            <img src="/tab/like.png"/>
+                        </div>
+                        <div className={activeTab === 3 ? "third_imoji-tab-box active" : "third_imoji-tab-box"} onClick={(e) => onClickTab(3)}>
+                            <img src="/tab/cheer.png"/>
+                        </div>
+                        <div className={activeTab === 4 ? "third_imoji-tab-box active" : "third_imoji-tab-box"} onClick={(e) => onClickTab(4)}>
+                            <img src="/tab/donut.png"/>
+                        </div>
+                        <div className={activeTab === 5 ? "third_imoji-tab-box active" : "third_imoji-tab-box"} onClick={(e) => onClickTab(5)}>
+                            <img src="/tab/confetti.png"/>
+                        </div>
+                        <div className={activeTab === 6 ? "third_imoji-tab-box active" : "third_imoji-tab-box"} onClick={(e) => onClickTab(6)}>
+                            <img src="/tab/cat.png"/>
+                        </div>
+                        <div className={activeTab === 7 ? "third_imoji-tab-box active" : "third_imoji-tab-box"} onClick={(e) => onClickTab(7)}>
+                            <img src="/tab/hearts.png"/>
+                        </div>
+                    </div>
                     <div className="third_sticker-scroll">
-                        <div className="third_category">인사</div>
+                        <div className="third_category" ref={(el) => categoryRefs.current[0] = el}>
+                            <div className="third_category_text">인사</div>
+                        </div>
                         <div className="third_grid">
                             <img src="/emoticon/17.png" onClick={(e) => onClickImage(0, e)}
                                  className={activeIndex === 0 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
@@ -78,7 +153,9 @@ export default function ThirdChat() {
                                  className={activeIndex === 3 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
-                        <div className="third_category">감사 / 사과</div>
+                        <div className="third_category" ref={(el) => categoryRefs.current[1] = el}>
+                            <div className="third_category_text">감사 / 사과</div>
+                        </div>
                         <div className="third_grid">
                             <img src="/emoticon/21.png" onClick={(e) => onClickImage(4, e)}
                                  className={activeIndex === 4 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
@@ -90,7 +167,9 @@ export default function ThirdChat() {
                                  className={activeIndex === 7 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
-                        <div className="third_category">응원 / 격려</div>
+                        <div className="third_category" ref={(el) => categoryRefs.current[2] = el}>
+                            <div className="third_category_text">응원 / 격려</div>
+                        </div>
                         <div className="third_grid">
                             <img src="/emoticon/25.png" onClick={(e) => onClickImage(8, e)}
                                  className={activeIndex === 8 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
@@ -102,7 +181,9 @@ export default function ThirdChat() {
                                  className={activeIndex === 11 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
-                        <div className="third_category">음식</div>
+                        <div className="third_category" ref={(el) => categoryRefs.current[3] = el}>
+                            <div className="third_category_text">음식</div>
+                        </div>
                         <div className="third_grid">
                             <img src="/emoticon/29.png" onClick={(e) => onClickImage(12, e)}
                                  className={activeIndex === 12 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
@@ -114,7 +195,9 @@ export default function ThirdChat() {
                                  className={activeIndex === 15 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
-                        <div className="third_category">축하 / 이벤트</div>
+                        <div className="third_category" ref={(el) => categoryRefs.current[4] = el}>
+                            <div className="third_category_text">축하 / 이벤트</div>
+                        </div>
                         <div className="third_grid">
                             <img src="/emoticon/41.png" onClick={(e) => onClickImage(16, e)}
                                  className={activeIndex === 16 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
@@ -126,7 +209,9 @@ export default function ThirdChat() {
                                  className={activeIndex === 19 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
-                        <div className="third_category">동물 / 자연</div>
+                        <div className="third_category" ref={(el) => categoryRefs.current[5] = el}>
+                            <div className="third_category_text">동물 / 자연</div>
+                        </div>
                         <div className="third_grid">
                             <img src="/emoticon/33.png" onClick={(e) => onClickImage(20, e)}
                                  className={activeIndex === 20 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
@@ -138,7 +223,9 @@ export default function ThirdChat() {
                                  className={activeIndex === 23 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
-                        <div className="third_category">애정</div>
+                        <div className="third_category" ref={(el) => categoryRefs.current[6] = el}>
+                            <div className="third_category_text">애정</div>
+                        </div>
                         <div className="third_grid">
                             <img src="/emoticon/37.png" onClick={(e) => onClickImage(24, e)}
                                  className={activeIndex === 24 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
