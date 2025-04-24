@@ -8,7 +8,7 @@ export default function ThirdChat() {
     const [selectedImage, setSelectedImage] = useState('');
     const [activeIndex, setActiveIndex] = useState(null);
     const [end, setEnd] = useState(null);
-    const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState(null);
     const categoryRefs = useRef([]);
 
     useEffect(() => {
@@ -24,6 +24,7 @@ export default function ThirdChat() {
         const scrollContainer = document.querySelector('.third_sticker-scroll');
 
         const handleScroll = () => {
+            console.log(isUserScrolling.current);
             if (!isUserScrolling.current) return;
 
             const containerTop = scrollContainer.getBoundingClientRect().top;
@@ -96,6 +97,7 @@ export default function ThirdChat() {
 
     const onClickSmile = (focused) => {
         setIsFocused(focused);
+        onClickTab(1);
         isUserScrolling.current = focused;
     }
 
