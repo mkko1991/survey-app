@@ -94,6 +94,11 @@ export default function ThirdChat() {
         }
     }
 
+    const onClickSmile = (focused) => {
+        setIsFocused(focused);
+        isUserScrolling.current = focused;
+    }
+
     const isUserScrolling = useRef(true);
 
     return (
@@ -256,7 +261,7 @@ export default function ThirdChat() {
                     </div>
                     <div className="third_smile">
                         <img src="/first_chat/tooltip.png" className={!isFocused ? "imoji_tooltip" : "imoji_tooltip-hide"}/>
-                        <img src="/first_chat/smile.png" onClick={() => setIsFocused(!isFocused)}/>
+                        <img src="/first_chat/smile.png" onClick={() => onClickSmile(!isFocused)}/>
                     </div>
                     {activeIndex != null ?
                         <div className="third_send" onClick={handleSend}>
