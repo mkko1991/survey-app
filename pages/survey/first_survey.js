@@ -48,10 +48,10 @@ export default function First_survey() {
     return (
         <div className="pre_urvey-wrapper">
             <div className="pre_survey-container">
-                <image src="/first/survey.png" className="first_survey_header_img"/>
+                <img src="/first/survey.png" className="first_survey_header_img"/>
                 <div className="pre_survey-header">사용자 경험에 관한 질문</div>
 
-                <div className="pre_survey-imgbox"><image src="/first/survey_1.png"/></div>
+                <div className="pre_survey-imgbox"><img src="/first/survey_1.png"/></div>
                 <div className="pre_survey-box top">
                     {renderLikertQuestion(
                         1,
@@ -73,7 +73,7 @@ export default function First_survey() {
                         'q'
                     )}
                 </div>
-                <div className="pre_survey-imgbox"><image src="/first/survey_2.png"/></div>
+                <div className="pre_survey-imgbox"><img src="/first/survey_2.png"/></div>
                 <div className="pre_survey-box top">
                     {renderLikertQuestion(
                         4,
@@ -95,7 +95,7 @@ export default function First_survey() {
                         'q'
                     )}
                 </div>
-                <div className="pre_survey-imgbox"><image src="/first/survey_3.png"/></div>
+                <div className="pre_survey-imgbox"><img src="/first/survey_3.png"/></div>
                 <div className="pre_survey-box top">
                     {renderLikertQuestion(
                         7,

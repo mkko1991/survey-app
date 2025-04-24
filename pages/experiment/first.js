@@ -9,10 +9,10 @@ export default function First() {
 
     return (
         <main className="first_main">
-            <image className="first_background" src="/global/background.png"/>
-            <image className="first_status" src="/global/status.png"/>
-            <image className="first_center" src="/first/center.png"/>
-            <image onClick={handleSubmit} className="first_button" src="/global/button.png"/>
+            <img className="first_background" src="/global/background.png"/>
+            <img className="first_status" src="/global/status.png"/>
+            <img className="first_center" src="/first/center.png"/>
+            <img onClick={handleSubmit} className="first_button" src="/global/button.png"/>
         </main>
     );
 }

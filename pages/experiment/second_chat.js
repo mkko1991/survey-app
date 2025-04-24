@@ -86,13 +86,13 @@ export default function SecondChat() {
 
             <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-            <image src="/first_chat/status_bar.png" className="second_status_bar"/>
-            <image src="/first_chat/status_bar2.png" className="second_status_bar2"/>
-            <image src="/first_chat/friend_chat.png" className="second_friend_chat"/>
+            <img src="/first_chat/status_bar.png" className="second_status_bar"/>
+            <img src="/first_chat/status_bar2.png" className="second_status_bar2"/>
+            <img src="/first_chat/friend_chat.png" className="second_friend_chat"/>
 
             {end && <div className="second_chat-box">
                 <div className="second_chat-image">
-                    <image src={selectedImage}/>
+                    <img src={selectedImage}/>
                 </div>
                 <div className="second_chat-text">
                     {input}
@@ -102,13 +102,13 @@ export default function SecondChat() {
             {isFocused && !end && (<div className="second_imoji-container">
                     <div className="second_imoji-tab">
                         <div className={activeTab === 1 ? "second_imoji-tab-box active" : "second_imoji-tab-box"} onClick={(e) => onClickTab(1)}>
-                            <image src="/tab/star.png"/>
+                            <img src="/tab/star.png"/>
                         </div>
                         <div className={activeTab === 2 ? "second_imoji-tab-box active" : "second_imoji-tab-box"} onClick={(e) => onClickTab(2)}>
-                            <image src="/tab/smile.png"/>
+                            <img src="/tab/smile.png"/>
                         </div>
                         <div className={activeTab === 3 ? "second_imoji-tab-box active" : "second_imoji-tab-box"} onClick={(e) => onClickTab(3)}>
-                            <image src="/tab/gif.png"/>
+                            <img src="/tab/gif.png"/>
                         </div>
                     </div>
                     {activeTab === 1 && <div className="second_sticker-scroll">
@@ -120,7 +120,7 @@ export default function SecondChat() {
                                 {group.map((item, indexInGroup) => {
                                     const actualIndex = lineIndex * 4 + indexInGroup;
                                     return (
-                                        <image
+                                        <img
                                             key={actualIndex}
                                             onClick={(e) => onClickImage(actualIndex, e)}
                                             className={activeIndex === actualIndex ? 'second_imoji-img second_active' : 'second_imoji-img'}
@@ -137,7 +137,7 @@ export default function SecondChat() {
                             <div key={`line-${lineIndex}`} className="second_grid">
                                 {group.map((item, indexInGroup) => {
                                     return (
-                                        <image
+                                        <img
                                             key={lineIndex + "smile"}
                                             className="second_imoji-img"
                                             src={item}
@@ -153,7 +153,7 @@ export default function SecondChat() {
                             <div key={`line-${lineIndex}`} className="second_grid">
                                 {group.map((item, indexInGroup) => {
                                     return (
-                                        <image
+                                        <img
                                             key={lineIndex + "gif"}
                                             className="second_imoji-img"
                                             src={item}
@@ -169,7 +169,7 @@ export default function SecondChat() {
             {!end && <div className="second_input-box">
                 <div className="second_input-line">
                     <div className="second_plus">
-                        <image src="/first_chat/plus.png"/>
+                        <img src="/first_chat/plus.png"/>
                     </div>
                     <div className="second_text-box">
                         <div className="second_wrapper">
@@ -182,16 +182,16 @@ export default function SecondChat() {
                         </div>
                     </div>
                     <div className="second_smile">
-                        <image src="/first_chat/tooltip.png"
+                        <img src="/first_chat/tooltip.png"
                              className={!isFocused ? "imoji_tooltip" : "imoji_tooltip-hide"}/>
-                        <image src="/first_chat/smile.png" onClick={() => setIsFocused(!isFocused)}/>
+                        <img src="/first_chat/smile.png" onClick={() => setIsFocused(!isFocused)}/>
                     </div>
                     {activeIndex != null ?
                         <div className="second_send" onClick={() => setEnd(true)}>
-                            <image src="/first_chat/send.png"/>
+                            <img src="/first_chat/send.png"/>
                         </div> :
                         <div className="second_shop">
-                            <image src="/first_chat/shop.png"/>
+                            <img src="/first_chat/shop.png"/>
                         </div>
                     }
                 </div>
@@ -200,7 +200,7 @@ export default function SecondChat() {
             {
                 end &&
                 <div className="second_next-button">
-                    <image src="/first_chat/next_button.png" onClick={nextStep}/>
+                    <img src="/first_chat/next_button.png" onClick={nextStep}/>
                 </div>
             }
         </div>

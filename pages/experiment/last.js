@@ -47,9 +47,9 @@ export default function Last() {
 
     return (
         <main className="last_main">
-            <image className="last_background" src="/global/background.png"/>
-            <image className="last_status" src="/global/status.png"/>
-            <image className="last_center" src="/last/center.png"/>
+            <img className="last_background" src="/global/background.png"/>
+            <img className="last_status" src="/global/status.png"/>
+            <img className="last_center" src="/last/center.png"/>
         </main>
     );
 }

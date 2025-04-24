@@ -425,7 +425,7 @@ export default function PreSurvey() {
                                             checked={isEmojiChecked}
                                             onChange={onChangeEmoji}
                                         />
-                                        <image src={emoji}/>
+                                        <img src={emoji}/>
                                     </label>
                                 );
                             })}
