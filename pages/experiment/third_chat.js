@@ -159,6 +159,16 @@ export default function ThirdChat() {
                             <img src="/emoticon/20.png" onClick={(e) => onClickImage(3, e)}
                                  className={activeIndex === 3 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
+                        <div className="third_grid">
+                            <img src="/emoticon/45.png" onClick={(e) => onClickImage(28, e)}
+                                 className={activeIndex === 28 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/46.png" onClick={(e) => onClickImage(29, e)}
+                                 className={activeIndex === 29 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/47.png" onClick={(e) => onClickImage(30, e)}
+                                 className={activeIndex === 30 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/48.png" onClick={(e) => onClickImage(31, e)}
+                                 className={activeIndex === 31 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                        </div>
 
                         <div className="third_category" ref={(el) => categoryRefs.current[1] = el}>
                             <div className="third_category_text">감사 / 사과</div>
@@ -172,6 +182,16 @@ export default function ThirdChat() {
                                  className={activeIndex === 6 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                             <img src="/emoticon/24.png" onClick={(e) => onClickImage(7, e)}
                                  className={activeIndex === 7 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                        </div>
+                        <div className="third_grid">
+                            <img src="/emoticon/49.png" onClick={(e) => onClickImage(32, e)}
+                                 className={activeIndex === 32 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/50.png" onClick={(e) => onClickImage(33, e)}
+                                 className={activeIndex === 33 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/51.png" onClick={(e) => onClickImage(34, e)}
+                                 className={activeIndex === 34 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/52.png" onClick={(e) => onClickImage(35, e)}
+                                 className={activeIndex === 35 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
                         <div className="third_category" ref={(el) => categoryRefs.current[2] = el}>
@@ -187,6 +207,16 @@ export default function ThirdChat() {
                             <img src="/emoticon/28.png" onClick={(e) => onClickImage(11, e)}
                                  className={activeIndex === 11 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
+                        <div className="third_grid">
+                            <img src="/emoticon/53.png" onClick={(e) => onClickImage(36, e)}
+                                 className={activeIndex === 36 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/54.png" onClick={(e) => onClickImage(37, e)}
+                                 className={activeIndex === 37 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/55.png" onClick={(e) => onClickImage(38, e)}
+                                 className={activeIndex === 38 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/56.png" onClick={(e) => onClickImage(39, e)}
+                                 className={activeIndex === 39 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                        </div>
 
                         <div className="third_category" ref={(el) => categoryRefs.current[3] = el}>
                             <div className="third_category_text">음식</div>
@@ -200,6 +230,16 @@ export default function ThirdChat() {
                                  className={activeIndex === 14 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                             <img src="/emoticon/32.png" onClick={(e) => onClickImage(15, e)}
                                  className={activeIndex === 15 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                        </div>
+                        <div className="third_grid">
+                            <img src="/emoticon/57.png" onClick={(e) => onClickImage(40, e)}
+                                 className={activeIndex === 40 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/58.png" onClick={(e) => onClickImage(41, e)}
+                                 className={activeIndex === 41 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/59.png" onClick={(e) => onClickImage(42, e)}
+                                 className={activeIndex === 42 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/60.png" onClick={(e) => onClickImage(43, e)}
+                                 className={activeIndex === 43 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
 
                         <div className="third_category" ref={(el) => categoryRefs.current[4] = el}>
@@ -215,6 +255,16 @@ export default function ThirdChat() {
                             <img src="/emoticon/44.png" onClick={(e) => onClickImage(19, e)}
                                  className={activeIndex === 19 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
+                        <div className="third_grid">
+                            <img src="/emoticon/61.png" onClick={(e) => onClickImage(44, e)}
+                                 className={activeIndex === 44 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/62.png" onClick={(e) => onClickImage(45, e)}
+                                 className={activeIndex === 45 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/63.png" onClick={(e) => onClickImage(46, e)}
+                                 className={activeIndex === 46 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/64.png" onClick={(e) => onClickImage(47, e)}
+                                 className={activeIndex === 47 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                        </div>
 
                         <div className="third_category" ref={(el) => categoryRefs.current[5] = el}>
                             <div className="third_category_text">동물 / 자연</div>
@@ -229,6 +279,16 @@ export default function ThirdChat() {
                             <img src="/emoticon/36.png" onClick={(e) => onClickImage(23, e)}
                                  className={activeIndex === 23 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
+                        <div className="third_grid">
+                            <img src="/emoticon/65.png" onClick={(e) => onClickImage(48, e)}
+                                 className={activeIndex === 48 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/66.png" onClick={(e) => onClickImage(49, e)}
+                                 className={activeIndex === 49 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/67.png" onClick={(e) => onClickImage(50, e)}
+                                 className={activeIndex === 50 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/68.png" onClick={(e) => onClickImage(51, e)}
+                                 className={activeIndex === 51 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                        </div>
 
                         <div className="third_category" ref={(el) => categoryRefs.current[6] = el}>
                             <div className="third_category_text">애정</div>
@@ -242,6 +302,16 @@ export default function ThirdChat() {
                                  className={activeIndex === 26 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                             <img src="/emoticon/40.png" onClick={(e) => onClickImage(27, e)}
                                  className={activeIndex === 27 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                        </div>
+                        <div className="third_grid">
+                            <img src="/emoticon/69.png" onClick={(e) => onClickImage(52, e)}
+                                 className={activeIndex === 52 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/70.png" onClick={(e) => onClickImage(53, e)}
+                                 className={activeIndex === 53 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/71.png" onClick={(e) => onClickImage(54, e)}
+                                 className={activeIndex === 54 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
+                            <img src="/emoticon/72.png" onClick={(e) => onClickImage(55, e)}
+                                 className={activeIndex === 55 ? 'third_imoji-img third_active' : 'third_imoji-img'}/>
                         </div>
                     </div>
                 </div>
