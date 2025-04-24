@@ -9,10 +9,10 @@ export default function Third() {
 
     return (
         <main className="third_main">
-            <img className="third_background" src="/global/background.png"/>
-            <img className="third_status" src="/global/status.png"/>
-            <img className="third_center" src="/third/center.png"/>
-            <img onClick={handleSubmit} className="third_button" src="/global/button.png"/>
+            <image className="third_background" src="/global/background.png"/>
+            <image className="third_status" src="/global/status.png"/>
+            <image className="third_center" src="/third/center.png"/>
+            <image onClick={handleSubmit} className="third_button" src="/global/button.png"/>
         </main>
     );
 }

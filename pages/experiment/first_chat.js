@@ -75,13 +75,13 @@ export default function FirstChat() {
 
             <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-            <img src="/first_chat/status_bar.png" className="first_status_bar"/>
-            <img src="/first_chat/status_bar2.png" className="first_status_bar2"/>
-            <img src="/first_chat/friend_chat.png" className="first_friend_chat"/>
+            <image src="/first_chat/status_bar.png" className="first_status_bar"/>
+            <image src="/first_chat/status_bar2.png" className="first_status_bar2"/>
+            <image src="/first_chat/friend_chat.png" className="first_friend_chat"/>
 
             {end && <div className="first_chat-box">
                 <div className="first_chat-image">
-                    <img src={selectedImage}/>
+                    <image src={selectedImage}/>
                 </div>
                 <div className="first_chat-text">
                     {input}
@@ -103,7 +103,7 @@ export default function FirstChat() {
                                 const actualIndex = lineIndex * 4 + indexInGroup;
                                 return (
                                     <div key={actualIndex} className="first_imoji">
-                                        <img
+                                        <image
                                             onClick={(e) => onClickImage(actualIndex, e)}
                                             className={activeIndex === actualIndex ? 'first_imoji-img first_active' : 'first_imoji-img'}
                                             src={item}
@@ -120,7 +120,7 @@ export default function FirstChat() {
             {!end && <div className="first_input-box">
                 <div className="first_input-line">
                     <div className="first_plus">
-                        <img src="/first_chat/plus.png"/>
+                        <image src="/first_chat/plus.png"/>
                     </div>
                     <div className="first_text-box">
                         <div className="first_wrapper">
@@ -137,14 +137,14 @@ export default function FirstChat() {
                         </div>
                     </div>
                     <div className="first_smile">
-                        <img src="/first_chat/smile.png"/>
+                        <image src="/first_chat/smile.png"/>
                     </div>
                     {activeIndex != null ?
                         <div className="first_send" onClick={() => setEnd(true)}>
-                            <img src="/first_chat/send.png"/>
+                            <image src="/first_chat/send.png"/>
                         </div> :
                         <div className="first_shop">
-                            <img src="/first_chat/shop.png"/>
+                            <image src="/first_chat/shop.png"/>
                         </div>
                     }
                 </div>
@@ -153,7 +153,7 @@ export default function FirstChat() {
             {
                 end &&
                 <div className ="first_next-button">
-                    <img src="/first_chat/next_button.png" onClick={nextStep}/>
+                    <image src="/first_chat/next_button.png" onClick={nextStep}/>
                 </div>
             }
         </div>

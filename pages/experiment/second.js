@@ -9,10 +9,10 @@ export default function Second() {
 
     return (
         <main className="second_main">
-            <img className="second_background" src="/global/background.png"/>
-            <img className="second_status" src="/global/status.png"/>
-            <img className="second_center" src="/second/center.png"/>
-            <img onClick={handleSubmit} className="second_button" src="/global/button.png"/>
+            <image className="second_background" src="/global/background.png"/>
+            <image className="second_status" src="/global/status.png"/>
+            <image className="second_center" src="/second/center.png"/>
+            <image onClick={handleSubmit} className="second_button" src="/global/button.png"/>
         </main>
     );
 }
