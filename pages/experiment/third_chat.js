@@ -73,7 +73,7 @@ export default function ThirdChat() {
     }
 
     const handleSend = () => {
-        if (![16, 17, 18, 19].includes(activeIndex)) {
+        if (![16, 17, 18, 19, 44, 45, 46, 47].includes(activeIndex)) {
             alert("축하 / 이벤트 이모티콘을 선택 해야 합니다.");
             return;
         }
